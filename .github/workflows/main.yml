@@ -1,4 +1,4 @@
-name: Main 1.1
+name: Main 1.2
 on: pull_request
 
 jobs:
