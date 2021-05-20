@@ -17,3 +17,14 @@ jobs:
 
       - name: Run Bundlesize2
         run: npm run bundlesize
+
+      - name: Log Github Context
+        run: echo "$GITHUB_CONTEXT"
+        env:
+          GITHUB_CONTEXT: ${{ toJSON(github) }}
+
+      - name: Custom Logging
+        run: echo "Repo data is $CI_REPO_OWNER - $CI_REPO_NAME"
+        env:
+          CI_REPO_OWNER: ${{ github.repository_owner }}
+          CI_REPO_NAME: ${{ github.event.repository.name }}
