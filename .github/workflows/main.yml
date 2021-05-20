@@ -1,8 +1,5 @@
 name: Main
-
-on:
-  pull_request:
-    types: [synchronize, opened, reopened]
+on: pull_request
 
 jobs:
   build: 
